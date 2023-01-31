@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<country_list>
+    <country>
+        <id>1</id>
+        <countryName>India</countryName>
+    </country>
+    <country>
+        <id>2</id>
+        <countryName>Sri Lanka</countryName>
+    </country>
+    <country>
+        <id>3</id>
+        <countryName>UK</countryName>
+    </country>
+    <country>
+        <id>4</id>
+        <countryName>USA</countryName>
+    </country>
+</country_list>

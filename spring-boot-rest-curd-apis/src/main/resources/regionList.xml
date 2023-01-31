@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<region-list>
+	<region>
+		<regionName>India</regionName>
+		<id>1</id>
+	</region>
+	<region>
+		<regionName>Sri Lanka</regionName>
+		<id>2</id>
+	</region>
+	<region>
+		<regionName>USA</regionName>
+		<id>3</id>
+	</region>
+	<region>
+		<regionName>UK</regionName>
+		<id>4</id>
+	</region>
+</region-list>
