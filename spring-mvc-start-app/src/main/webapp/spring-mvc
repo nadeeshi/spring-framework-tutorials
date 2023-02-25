@@ -1,0 +1,16 @@
+Spring MVC is based on Model-View-Controller Architecture
+
+DispatcherServlet - this is the front controller class that take all user requests
+                    and process requests
+                    We configure it under web.xml file
+
+web.xml - configure Dispatcher servlet
+
+Controller -
+
+Model -
+
+Views -> JSP classes
+
+
+This project is Dynamic web application, we created with maven dependencies management
