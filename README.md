@@ -1,7 +1,7 @@
 # spring-framework-tutorials
 This repository included Spring exercises with Spring MVC, Spring Boot, Rest APIs, Maven, Apache Tomcat Server, JSP
 
-## Table of contents
+## Spring Boot Applications
 
 * [spring-boot-helloworld-exmaple](#spring-boot-helloworld-exmaple)
 
@@ -40,6 +40,60 @@ Technology Used: -
       8. Access post request through Postman, since all browser calles are work as GET request
   ```
   ------------------------------------------------------------------
+* [spring-boot-with-mssql-server](#spring-boot-with-mssql-server)
+
+Connect to Microsoft SQL Server from a Spring Boot application in the following two common scenarios:
+  1. A Spring Boot - console application with Spring JDBC and JdbcTemplate.
+                     Relational database in a Spring Boot application using JDBC instead of an ORM framework like Hibernate. 
+                     For simple database operations, using JDBC is easier and more efficiently than using Hibernate.
+  2. A Spring Boot - web application with Spring Data JPA and Hibernate framework(ORM).
+
+```
+Contain about - 
+  1. apps/initial point
+      1. SpringBootWithMssqlServerApplication2.java <- 1st method
+      2. SpringBootWithMssqlServerApplication1.java < - 2nd method
+  2. controller
+      1. CustomerController.java
+  3. model
+      1. Customer.java <-Java class (entity) that maps to a table in the database (Entity mapping required for 2nd method, 
+                        for first method even we can use normal java bean class)
+  4. dao
+      1. CustomerRepository.java <- required for 2nd method, no need for 1st
+  5. apllications.properties <- data source properties for the database connection information
+
+Technology Used: - 
+      1. Spring boot
+      2. spring-boot-starter-parent - 2.7.10-SNAPSHOT
+      3. spring-boot-starter-web <- for 2nd method
+      4. spring-boot-starter-jdbc
+      5. mssql-jdbc_auth <- replace java bin/lib folder with this drivers
+      6. spring-boot-starter-data-jpa <- for 2nd method (Spring-daa-JPA, Spring include by default hibernate with this)
+      7. JDK 8
+      8. Jackson-plugin - 2.8.1 (To XML/JSON conversion)
+      9. maven compiler plugin - 3.8.6
+      10. Run through embedded Tomcat server
+      11. SQL Server JDBC driver <- This allows Java application to connect to Microsoft SQL Server
+      12. Spring JDBC or Spring Data JPA 
+            1. Spring JDBC -> work with JDBCTemplate
+                              Can use this only with Model class and console applications
+                              To use JDBC with Spring Boot, we need to specify the spring-boot-starter-jdbc dependency.
+                              Spring framework provides the JdbcTemplate class that simplifies coding with JDBC.
+                              
+                              And the mysql-connector-java dependency is required to work with MySQL database. 
+                              But we can use mssql-jdbc dependency also for this purpose.
+
+            2. Spring Data JPA -> work with Hibernate (standard way to use)
+                                  Use this with an entity classes and a repository interface
+                                  by default, Spring Data JPA uses Hibernate as implementation of Java Persistence API (JPA)
+      13. MSSQL Server
+          1. Create Database
+          2. Create Tables
+          3. Insert Data
+          4. Read Data & Display using JSON and Console output
+  ```
+  ------------------------------------------------------------------
+  ## Spring Framework (MVC) Applications
   * [spring-mvc-start-app](#spring-mvc-start-app)
 
  Implement Spring MVC project, with DispactherServlet and Web.xml, with JSP views.
